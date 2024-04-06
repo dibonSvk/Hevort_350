@@ -7,16 +7,16 @@ Setup new github repo on the Pi:
 3. SSH into the Pi and run the following commands:
 
 git config --global credential.helper store
-git config --global user.name "<Your Name>"
-git config --global user.email "<Your email>"
+git config --global user.name "dibonSvk"
+git config --global user.email "ptacek.vladimir@gmail.com"
 
-cd ~/klipper_config
+cd /home/pi/printer_data/config
 git init
 git add .
 git commit -m "First commit"
-git remote add origin <remote repository URL>
+git remote add origin https://github.com/dibonSvk/Hevort_350.git
 git remote -v
-git push --set-upstream origin master
+git push --set-upstream origin master /// instead of psw use token!!! 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
 
 4. If you browse to your Github repo, you should see the backup.
 
@@ -24,11 +24,12 @@ git push --set-upstream origin master
 
 Setup the macro:
 
-1. Create a new folder called "git" in ~/klipper_config (you can do this through Fluidd or Mainsail)
+1. Create a new folder called "git" in /home/pi/printer_data/config (you can do this through Fluidd or Mainsail)
 
 2. Upload backup_to_git_macro.cfg and backup_to_git.sh tp this new folder
 
-3. SSH into the Pi and install "Shell Command" through Kiauh (Options: 4 then 9). When prompted to install the sample macro, just say No.
+3. SSH into the Pi and install "Shell Command" through Kiauh (Options: 4 then 8). When prompted to install the sample macro, just say No.
+/// ./kiauh/kiauh.sh
 
 4. Edit printer.cfg and add this line near the top:
 [include git/*.cfg]
