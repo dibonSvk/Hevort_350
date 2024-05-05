@@ -16,7 +16,7 @@ git add .
 git commit -m "First commit"
 git remote add origin https://github.com/dibonSvk/Hevort_350.git
 git remote -v
-git push --set-upstream origin master /// instead of psw use token!!! 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
+git push --set-upstream origin master       /// instead of psw use token!!! ///
 
 4. If you browse to your Github repo, you should see the backup.
 
